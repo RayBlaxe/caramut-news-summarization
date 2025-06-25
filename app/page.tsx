@@ -175,7 +175,7 @@ export default function Home() {
                 </Button>
               </CardTitle>
               <CardDescription>
-                AI-generated summary with key insights and main points
+                Machine Learning generated summary with key insights and main points
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
