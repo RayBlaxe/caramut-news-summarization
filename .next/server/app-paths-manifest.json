@@ -1,4 +1,7 @@
 {
+  "/about/page": "app/about/page.js",
   "/api/summarize/route": "app/api/summarize/route.js",
+  "/dev-team/page": "app/dev-team/page.js",
+  "/home/page": "app/home/page.js",
   "/page": "app/page.js"
 }

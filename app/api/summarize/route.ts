@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { pipeline } from '@xenova/transformers';
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,17 +12,22 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Mock response - replace with actual Flask API call
-    const mockSummary = {
-      summary: "This is a mock summary of the news article. The AI has analyzed the content and provided a concise overview highlighting the key points, main events, and important details while maintaining the essential information in a much shorter format.",
+    const summarizer = await pipeline('summarization', 'Xenova/distilbart-cnn-6-6');
+    const summary = await summarizer(text, {
+      max_length: 150,
+      min_length: 30,
+      no_repeat_ngram_size: 3,
+      early_stopping: true,
+    });
+
+    const summaryText = Array.isArray(summary) ? summary[0].summary_text : summary.summary_text;
+
+    return NextResponse.json({
+      summary: summaryText,
       original_length: text.length,
-      summary_length: 200
-    }
+      summary_length: summaryText.length,
+    });
 
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1500))
-
-    return NextResponse.json(mockSummary)
   } catch (error) {
     console.error('Error in summarize API:', error)
     return NextResponse.json(
