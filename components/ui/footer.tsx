@@ -1,4 +1,4 @@
-import { Heart, Code, BookOpen } from "lucide-react";
+import { Heart, Code } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
