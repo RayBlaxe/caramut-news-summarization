@@ -45,7 +45,7 @@ export default function Home() {
 
       const data: SummaryResponse = await response.json()
       setSummary(data)
-    } catch (err) {
+    } catch {
       setError('Failed to summarize the news. Please try again.')
     } finally {
       setIsLoading(false)

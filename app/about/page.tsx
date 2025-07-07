@@ -31,7 +31,7 @@ export default function About() {
                 <strong>Caramut News Summarization</strong> is an innovative artificial intelligence-powered platform designed to transform lengthy news articles into concise, meaningful summaries. This project represents our culminating work in the Natural Language Processing course, combining theoretical knowledge with practical implementation.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                In today's information-rich world, readers often struggle to keep up with the volume of news content. Our solution addresses this challenge by leveraging advanced NLP techniques to extract key information, maintaining context while significantly reducing reading time.
+                In today&apos;s information-rich world, readers often struggle to keep up with the volume of news content. Our solution addresses this challenge by leveraging advanced NLP techniques to extract key information, maintaining context while significantly reducing reading time.
               </p>
             </div>
           </CardContent>
