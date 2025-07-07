@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -24,10 +25,14 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="bg-primary p-2 rounded-lg">
-                <Home className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">Caramut</span>
+              <Image
+                src="/images/logo.png"
+                alt="Caramut News Summarizer"
+                width={120}
+                height={40}
+                priority
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
