@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Home, Info, Users, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 const navigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -49,10 +50,12 @@ export default function Navigation() {
                   </Link>
                 )
               })}
+              <ThemeToggle />
             </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"

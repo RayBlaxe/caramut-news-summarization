@@ -11,7 +11,7 @@ const teamMembers = [
     avatar: "/api/placeholder/120/120",
     initials: "R",
     skills: ["Python", "NLP", "Machine Learning", "Backend Development"],
-    color: "bg-primary",
+    color: "bg-blue-600 dark:bg-blue-500",
     focus: "Algorithm Development"
   },
   {
@@ -21,7 +21,7 @@ const teamMembers = [
     avatar: "/api/placeholder/120/120",
     initials: "C",
     skills: ["React", "TypeScript", "Next.js", "API Development"],
-    color: "bg-success",
+    color: "bg-green-600 dark:bg-green-500",
     focus: "Frontend & Integration"
   },
   {
@@ -31,7 +31,7 @@ const teamMembers = [
     avatar: "/api/placeholder/120/120",
     initials: "M",
     skills: ["UI/UX Design", "Frontend", "Tailwind CSS", "User Research"],
-    color: "bg-secondary",
+    color: "bg-purple-600 dark:bg-purple-500",
     focus: "Design & Experience"
   }
 ]
@@ -71,8 +71,8 @@ export default function DevTeam() {
                 <h3 className="font-semibold text-foreground">Full-Stack Development</h3>
                 <p className="text-sm text-muted-foreground">End-to-end web application development</p>
               </div>
-              <div className="text-center p-4 bg-secondary/10 rounded-lg">
-                <Palette className="h-8 w-8 text-secondary mx-auto mb-2" />
+              <div className="text-center p-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                <Palette className="h-8 w-8 text-purple-600 dark:text-purple-400 mx-auto mb-2" />
                 <h3 className="font-semibold text-foreground">UI/UX Design</h3>
                 <p className="text-sm text-muted-foreground">User-centered design and interface development</p>
               </div>

@@ -182,15 +182,15 @@ export default function Home() {
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-muted rounded-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-info">{summary.original_length}</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{summary.original_length}</div>
                   <div className="text-sm text-muted-foreground">Original Length</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-success">{summary.summary_length}</div>
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">{summary.summary_length}</div>
                   <div className="text-sm text-muted-foreground">Summary Length</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-secondary">{compressionRatio}%</div>
+                  <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{compressionRatio}%</div>
                   <div className="text-sm text-muted-foreground">Compression</div>
                 </div>
               </div>

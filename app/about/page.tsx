@@ -69,8 +69,8 @@ export default function About() {
 
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
             <CardHeader className="text-center">
-              <div className="mx-auto bg-secondary/20 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                <FileText className="h-8 w-8 text-secondary" />
+              <div className="mx-auto bg-purple-100 dark:bg-purple-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                <FileText className="h-8 w-8 text-purple-600 dark:text-purple-400" />
               </div>
               <CardTitle className="text-xl text-foreground">Quality Summaries</CardTitle>
             </CardHeader>
