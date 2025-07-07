@@ -1,5 +1,5 @@
-import { Heart, Code, BookOpen } from 'lucide-react'
-import Image from 'next/image'
+import { Heart, Code, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -11,18 +11,21 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Caramut News Summarizer"
-                width={120}
-                height={40}
-                className="h-8 w-auto"
+                width={400}
+                height={133}
+                className="h-10 md:h-12 w-auto" 
               />
             </div>
             <p className="text-muted-foreground text-sm">
-              AI-powered news summarization tool built as a final semester project for NLP course.
+              AI-powered news summarization tool built as a final semester
+              project for NLP course.
             </p>
           </div>
-          
+
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Project Info</h3>
+            <h3 className="text-lg font-semibold text-foreground">
+              Project Info
+            </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Natural Language Processing</li>
               <li>• Machine Learning</li>
@@ -30,9 +33,11 @@ export default function Footer() {
               <li>• Academic Project</li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Technologies</h3>
+            <h3 className="text-lg font-semibold text-foreground">
+              Technologies
+            </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Next.js & React</li>
               <li>• TypeScript</li>
@@ -41,7 +46,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <p className="text-sm text-muted-foreground">
@@ -57,5 +62,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
