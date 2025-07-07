@@ -73,12 +73,12 @@ export default function Home() {
     : 0
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div className="bg-background p-4">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div className="text-center py-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">News Summarizer</h1>
-          <p className="text-lg text-gray-600">Transform lengthy news articles into concise summaries</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">News Summarizer</h1>
+          <p className="text-lg text-muted-foreground">Transform lengthy news articles into concise summaries</p>
         </div>
 
         {/* Main Input Card */}
@@ -100,7 +100,7 @@ export default function Home() {
                 onChange={(e) => setNewsText(e.target.value)}
                 className="min-h-[200px] resize-y"
               />
-              <div className="flex justify-between items-center text-sm text-gray-500">
+              <div className="flex justify-between items-center text-sm text-muted-foreground">
                 <span>{newsText.length} characters</span>
                 <Badge variant="outline">
                   {newsText.length > 1000 ? 'Long article' : newsText.length > 500 ? 'Medium article' : 'Short article'}
@@ -180,25 +180,25 @@ export default function Home() {
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-lg">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-muted rounded-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">{summary.original_length}</div>
-                  <div className="text-sm text-gray-600">Original Length</div>
+                  <div className="text-2xl font-bold text-info">{summary.original_length}</div>
+                  <div className="text-sm text-muted-foreground">Original Length</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">{summary.summary_length}</div>
-                  <div className="text-sm text-gray-600">Summary Length</div>
+                  <div className="text-2xl font-bold text-success">{summary.summary_length}</div>
+                  <div className="text-sm text-muted-foreground">Summary Length</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">{compressionRatio}%</div>
-                  <div className="text-sm text-gray-600">Compression</div>
+                  <div className="text-2xl font-bold text-secondary">{compressionRatio}%</div>
+                  <div className="text-sm text-muted-foreground">Compression</div>
                 </div>
               </div>
 
               {/* Summary Text */}
               <div className="prose max-w-none">
-                <div className="p-4 bg-white border rounded-lg">
-                  <p className="text-gray-800 leading-relaxed">{summary.summary}</p>
+                <div className="p-4 bg-card border border-border rounded-lg">
+                  <p className="text-foreground leading-relaxed">{summary.summary}</p>
                 </div>
               </div>
             </CardContent>
