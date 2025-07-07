@@ -10,6 +10,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Caramut News Summarizer',
   description: 'AI-powered news summarization tool - Final Semester Project for NLP Course',
+  icons: {
+    icon: '/images/icon.png',
+    shortcut: '/images/icon.png',
+    apple: '/images/icon.png',
+  },
 }
 
 export default function RootLayout({
