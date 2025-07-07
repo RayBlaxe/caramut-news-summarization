@@ -6,6 +6,7 @@ out
 dist
 *.tgz
 .next
+.vercel
 
 # code coverage
 coverage

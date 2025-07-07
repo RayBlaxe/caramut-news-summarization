@@ -1,12 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
+  // Remove turbopack configuration for better deployment compatibility
+  experimental: {
+    // Enable if needed for specific features
+  },
+  // Ensure proper image optimization
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
       },
-    },
+    ],
   },
 }
 
